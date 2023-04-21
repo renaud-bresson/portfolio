@@ -1,0 +1,768 @@
+
+@font-face {
+  font-family: simpson;
+  src: url(./assets/Simpsonfont.otf);
+}
+
+@font-face{
+  font-family: LTwave;
+  src: url(./assets/LTwave/LTWave-Regular.ttf);
+}
+
+@font-face {
+  font-family: "SimplyRounded";
+  src: url(./assets/SimplyRounded.ttf);
+}
+
+$blue : #4472C4;
+$darkblue : #002060;
+$grey : #d6d6d6;
+$darkgrey : #535353;
+
+
+.text-simply{
+  font-family: SimplyRounded;
+}
+
+.text-simpson{
+  font-family: simpson;
+}
+
+.text-LT {
+  font-family: LTwave;
+}
+
+.text-darkgrey {
+  color: $darkgrey;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.text-darkblue {
+  color: $darkblue;
+}
+
+.border-grey{
+  border-color: $grey;
+}
+
+h2{
+  font-size: 4.5vh;
+}
+
+.h2-shadow{
+  text-shadow: 0px 0px 3px $grey;
+}
+
+p{
+  font-size: 3vh;
+}
+
+
+
+
+body{
+  background-image:url(./images/backgrounds/blurry-gradient-haikei\ .png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  padding-bottom: none;
+}
+
+/*---------------BACKGROUND-------------*/
+
+
+
+/*--------------END BACKGROUND--------------*/
+
+
+
+/* -----INTRO SKY---------- */
+
+.sky{
+  opacity: 0%;
+  position: absolute;
+  z-index:0;
+  height: 100vh;
+  width: 100%;
+  background-color: #79b0ff;
+  animation-name: endsky;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+
+.title h1{
+  margin: none;
+  padding: none;
+  z-index:6;
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 8px;
+  left:1.5%;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+  font-size: 4.5vh;
+  animation-name: titleZoomin, titleInNavbar, titleDisappear;
+  animation-duration: 2s, 1.5s, 1.7s;
+  animation-timing-function: linear, ease-in, ease-in;
+  animation-delay: 0s, 3.5s, 3.5s;
+  animation-fill-mode: forwards;
+}
+
+
+.top-cloud{
+  opacity:0%;
+  position: absolute;
+  height: 35%;
+  top: -2%;
+  left:25%;
+  animation-name: leftclouds;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+.big-cloud{
+  z-index:6;
+}
+.big-cloud_1{
+  opacity:0%;
+  position: absolute;
+  top:20%;
+  height:35%;
+  animation-name: leftclouds;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+.big-cloud_2{
+  opacity:0%;
+  position: absolute;
+  top:35%;
+  left: 50%;
+  animation-name: rightclouds;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+}
+
+.cloud-group{
+  z-index:5;
+}
+
+.cloud-group_1{
+  opacity:0%;
+  position: absolute;
+  top:30%;
+  left: 25%;
+  animation-name: leftclouds;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.cloud-group_2{
+  opacity:0%;
+  position: absolute;
+  height:25%;
+  top:10%;
+  left:60%;
+  animation-name: rightclouds;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+}
+.cloud-group_3{
+  opacity:0%;
+  position: absolute;
+  height:50%;
+  top:30%;
+  left:40%;
+  animation-name: rightclouds;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.middle-cloud{
+  opacity:0%;
+  position: absolute;
+  top:20%;
+  left:40%;
+  height:15%;
+  animation-name: leftclouds;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+.middle-cloud2{
+  opacity:0%;
+  position: absolute;
+  top:60%;
+  left:22%;
+  height:15%;
+  animation-name: leftclouds;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+.middle-cloud3{
+  opacity:0%;
+  position: absolute;
+  top:50%;
+  left:40%;
+  height:15%;
+  animation-name: rightclouds;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+
+@keyframes titleZoomin {
+  0%{font-size: 0vw;
+    top: 50%;
+    left:50%;
+    color: rgb(250, 225, 0);
+  }
+  100%{font-size:12vw;
+    top: 30%;
+    left:4%;
+    color: rgb(250, 225, 0);
+  }
+}
+
+@keyframes titleInNavbar{
+from{  
+  top: 30%;
+  left:4%;
+  color: rgb(250, 225, 0);
+  font-size: 12vw;
+  }
+to{
+  top: 8px;
+  left:1.5%;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+  font-size: 3.5vh;
+  }
+}
+
+@keyframes titleDisappear{
+  0%{
+    opacity:100%;
+    }
+  50%{
+    opacity:100%;
+    }
+  100%{
+    opacity:0%;
+    }
+}
+
+@keyframes endsky{
+  0%{
+    opacity:100%;
+  }
+  75%{
+    opacity:100%;
+  }
+  100%{
+    opacity:0%;
+  }
+
+}
+
+@keyframes leftclouds{
+  from{
+    transform: translateX(0%);
+    opacity:100%;
+  }
+  to{
+    transform:translateX(-100%);
+    opacity:0%;
+    z-index:0;
+  }
+}
+
+@keyframes rightclouds{
+  from{
+    transform: translateX(0%);
+    opacity:100%
+  }
+  to{
+    transform:translateX(100%);
+    opacity:0%
+  }
+}
+
+/* -----END INTRO SKY---------- */
+
+
+/*-----NAVBAR--------*/
+
+.navbar{
+  z-index: 1;
+  display:none;
+  position: top;
+  width: 100%;
+  opacity: 0%;
+  background-color:$darkblue;
+  animation-name: navbar;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  border-radius: 0 0 20px 20px;
+}
+
+.nav-link{
+  color:$grey;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+}
+.nav-link:hover{
+  color:$blue;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+}
+
+
+.navbar-toggler{
+  border-color: $grey;
+  position: absolute;
+  top: 15px;
+  right : 50px;
+}
+
+.navbar-toggler:active{
+  outline-color: $darkblue;
+}
+.fa-bars{
+  color: $grey;
+}
+
+#renaudButton{
+  text-decoration: none;
+}
+
+.renaudBresson:hover{
+  color:$blue;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+}
+
+.renaudBresson{
+  opacity: 0%;
+  color:$grey;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+  animation-name: renaudAppear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 4.6s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes navbar{
+  0%{opacity:0%}
+  100%{opacity:75%}
+}
+
+@keyframes renaudAppear{
+  from{
+    opacity:0%;
+    }
+  to{
+    opacity:100%;
+    }
+}
+
+/*-----------END NAVBAR-------*/
+
+
+
+/*------------SITE BODY-------------*/
+
+#siteBody{
+  display:none;
+  margin: 6% auto 0 auto;
+  animation-name: navbar;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  color:$grey;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+  font-family: SimplyRounded;
+}
+
+/*----BIO-----------*/
+
+
+#myBio{
+  background-image: url(./images/backgrounds/panorama_renaud.png); 
+  background-size: cover;
+  height:auto;
+  margin: 14vh auto 6vh auto;
+  padding:5px 20% 5px 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 19px 0px $darkblue;
+  font-size: 30vw;
+}
+
+.bioDiv{
+  text-align: start;
+}
+
+.cv-link-div{
+  font-size: 5px;
+  height:80px;
+}
+
+.custom-button{
+  box-shadow: 6px 6px 20px 0px $darkblue;
+}
+
+.custom-button:hover{
+  color: $darkblue;
+  background: none;
+  border-color: $darkblue;
+}
+
+
+
+/*--------END BIO-----------*/
+
+
+
+/*-----------SKILLS--------------*/
+
+#mySkills{
+  background-image: url(./images/backgrounds/laitues.png); 
+  background-size: cover;
+  height:50vh;
+  margin: 6vh auto;
+  padding:5px;
+  overflow:hidden;
+  border-radius: 10px;
+  box-shadow: 4px 4px 19px 0px $darkblue;
+
+  & h2{
+    margin: 5px 0 0 0;
+    z-index: 1;
+  }
+
+  & p{
+   margin: 0px auto 20px auto;
+    z-index: 1; 
+  }
+
+  & :hover{
+    cursor: pointer;
+  }
+}
+
+.skillsIco{
+  position:relative;
+  z-index:0;
+  animation-iteration-count: infinite;
+  &.a{
+  animation-name: skillsMvt1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  }
+  &.b{
+  animation-name: skillsMvt2;
+  animation-duration: 20s;
+  animation-timing-function: ease-in;
+  }
+  &.c{
+  animation-name: skillsMvt3;
+  animation-duration: 20s;
+  animation-timing-function: ease-out;
+  }
+  &.d{
+  animation-name: skillsMvt4;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  }
+  &.e{
+  animation-name: skillsMvt5;
+  animation-duration: 25s;
+  animation-timing-function: ease-in;
+  }
+  &.f{
+  animation-name: skillsMvt1;
+  animation-duration: 25s;
+  animation-timing-function: ease-out;
+  }
+  &.g{
+  animation-name: skillsMvt2;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  }
+  &.h{
+  animation-name: skillsMvt3;
+  animation-duration: 18s;
+  animation-timing-function: ease-in;
+  }
+  &.i{
+  animation-name: skillsMvt4;
+  animation-duration: 18s;
+  animation-timing-function: ease-out;
+  }
+  &.j{
+  animation-name: skillsMvt5;
+  animation-duration: 22s;
+  animation-timing-function: linear;
+  }
+  &.k{
+  animation-name: skillsMvt1;
+  animation-duration: 22s;
+  animation-timing-function: ease-in;
+  }
+  &.l{
+  animation-name: skillsMvt2;
+  animation-duration: 22s;
+  animation-timing-function: ease-out;
+  }
+  &.m{
+  animation-name: skillsMvt3;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  }
+  &.n{
+  animation-name: skillsMvt4;
+  animation-duration: 30s;
+  animation-timing-function: ease-in;
+  }
+  &.o{
+  animation-name: skillsMvt5;
+  animation-duration: 30s;
+  animation-timing-function: ease-out;
+  }
+}
+
+@keyframes skillsMvt1{
+  0%{
+    left:-40vw;
+    bottom : -10vh;
+    }
+  20%{
+    left:40vw;
+    bottom: 20vh;
+    }
+  40%{
+    left:-0vw;
+    bottom : -20vh;
+    }
+  60%{
+    left:10vw;
+    bottom : -40vh;
+    }
+  100%{
+    left:-40vw;
+    bottom : -10vh;
+    }
+}
+@keyframes skillsMvt2{
+  0%{
+    left:0vw;
+    bottom : -10vh;
+    }
+  20%{
+    left:22vw;
+    bottom: 22vh;
+    }
+  40%{
+    left:35vw;
+    bottom : -20vh;
+    }
+  60%{
+    left:18vw;
+    bottom : -30vh;
+    }
+  100%{
+    left:0vw;
+    bottom : -10vh;
+    }
+}
+@keyframes skillsMvt3{
+  0%{
+    left:26vw;
+    bottom : 47vh;
+    }
+  20%{
+    left:34vw;
+    bottom: 3vh;
+    }
+  40%{
+    left:-34vw;
+    bottom : -20vh;
+    }
+  60%{
+    left:-10vw;
+    bottom : 56vh;
+    }
+  100%{
+    left:26vw;
+    bottom : 47vh;
+    }
+}
+@keyframes skillsMvt4{
+  0%{
+    left:-26vw;
+    bottom : -47vh;
+    }
+  20%{
+    left:-34vw;
+    bottom: -3vh;
+    }
+  40%{
+    left:24vw;
+    bottom : 20vh;
+    }
+  60%{
+    left:10vw;
+    bottom : 56vh;
+    }
+  100%{
+    left:-26vw;
+    bottom : -47vh;
+    }
+}
+@keyframes skillsMvt5{
+  0%{
+    left:-30vw;
+    bottom : 27vh;
+    }
+  20%{
+    left:-30vw;
+    bottom: -8vh;
+    }
+  40%{
+    left:28vw;
+    bottom : 28vh;
+    }
+  60%{
+    left:14vw;
+    bottom : 53vh;
+    }
+  100%{
+    left:-30vw;
+    bottom : 27vh;
+    }
+}
+
+
+  /*---------MODAL-----------*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: $grey;
+    text-align: right;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid $darkblue;
+    width: 80%;
+    color: $darkblue;
+    & p{
+      text-align: center;
+      padding: 0px 30px;
+    }
+  }
+  
+  .close-button {
+    color: $darkblue;
+    float: right !important;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: $blue;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/*------------END SKILLS--------------*/
+
+
+
+
+
+/*---------------PROJETS----------------*/
+#myProjects{
+  background-image: url(./images/backgrounds/abyme.png);
+  background-size: cover;
+  margin: 6vh auto 8vh auto;
+  padding:5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 19px 0px $darkblue;
+}
+#myProjects h2{
+  margin: 5px 0 0 0;
+}
+
+.project-card{
+  height: auto;
+  background-color: #d6d6d627;
+}
+
+.project-title{
+  font-size: 30px;
+}
+
+.project-subtitle{
+  font-size: 24px;
+}
+
+.explanation-text{
+  font-size: 18px;
+}
+
+.text-phpZoo{
+  color: #E0C784;
+  text-shadow: 1px 1px 3px #17533E;
+}
+
+.text-sunset{
+  color: #e7bd35;
+  text-shadow: 1px 1px 3px #2086d8;
+}
+
+
+/*------ FOOTER -------*/
+
+footer{
+  opacity:100%;
+  background-color: $darkblue;
+  border-radius: 20px 20px 0 0;
+  & a{
+    color: $grey;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.356);
+    font-size: 40px;
+    padding: 0 20px;
+    text-decoration: none;
+
+    & :hover{
+      color: $blue;
+    }
+  }
+}
+
+
+/*---------------END PROJETS----------------*/
+
+
+/*Media  Queries*/
+
+@media (max-width: 500px) {
+  #myBio{padding:5px;}
+  .bioDiv{text-align: center;}
+  .renaudBresson{font-size: 30px;}
+  #mySkills{height:60vh;}
+  footer a{font-size:35px; padding:0 10px}
+}
