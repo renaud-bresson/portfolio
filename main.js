@@ -44,3 +44,8 @@ closeButton.addEventListener('click', function() {
 
 
 
+//----------------PROJECTS--------------
+
+  
+  
+
