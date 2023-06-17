@@ -394,14 +394,15 @@ to{
   background-size: cover;
   height:auto;
   margin: 14vh auto 6vh auto;
-  padding:5px 20% 5px 5px;
+  padding:0px 35% 0px 5%;
   border-radius: 10px;
   box-shadow: 4px 4px 19px 0px $darkblue;
   font-size: 30vw;
 }
 
 .bioDiv{
-  text-align: start;
+  text-align: center;
+  padding: 5% 10% 0% 5%;
 }
 
 .cv-link-div{
@@ -733,6 +734,11 @@ to{
   text-shadow: 1px 1px 3px #2086d8;
 }
 
+.text-puissance4{
+  color: #ec4899;
+  text-shadow: 1px 1px 3px #0284c7;
+}
+
 
 /*------ FOOTER -------*/
 
@@ -760,9 +766,10 @@ footer{
 /*Media  Queries*/
 
 @media (max-width: 500px) {
-  #myBio{padding:5px;}
-  .bioDiv{text-align: center;}
+  #myBio{padding:0;}
+  .bioDiv{text-align: center; padding: 5% 5%;}
   .renaudBresson{font-size: 30px;}
+
   #mySkills{height:60vh;}
   footer a{font-size:35px; padding:0 10px}
 }
