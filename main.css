@@ -274,7 +274,7 @@ body {
   z-index: 1;
   display: none;
   position: top;
-  width: 100%;
+  max-width: 100%;
   opacity: 0%;
   background-color: #002060;
   animation-name: navbar;
@@ -702,6 +702,11 @@ body {
 .text-simpsonsFight {
   color: #F8DB27;
   text-shadow: 1px 1px 3px rgb(68, 164, 253);
+}
+
+.text-formulotheque {
+  color: #fb923c;
+  text-shadow: 1px 1px 3px #155e75;
 }
 
 /*------ FOOTER -------*/
